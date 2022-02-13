@@ -1,0 +1,14 @@
+Step 1, create Dockerfile
+
+Step 2, create requirements.txt file
+
+Step 3, run "docker build ." in command prompt inside root folder of this project
+
+Step 4, create docker-compose.yml file
+
+Step 5, run "docker-compose run app sh -c "django-admin.py startproject app ."" in command prompt inside root folder of this project.
+We tell docker-compose to run the service called "app" (we defined this service in docker-compose file).
+And we pass the shell script command "django-admin.py startproject app .".
+This command mean run django-admin management command that comes when you install django.
+It runs the startproject command, and it starts a new project called 'app' in our current location.
+This process run on our docker container, it gonna base on the last 'WORKDIR' we set in Dockerfile

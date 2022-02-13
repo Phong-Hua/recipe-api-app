@@ -1,0 +1,4 @@
+# Install django in between 2.1.3 and < 2.2.0
+Django>=2.1.3,<2.2.0
+# Install django rest framework
+djangorestframework>3.9.0,<3.10.0

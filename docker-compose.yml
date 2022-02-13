@@ -1,0 +1,24 @@
+# First line is version of docker compose
+version: "3"
+
+# Define services makes up our application
+services:
+  # the name of our service
+  # We gonna have a service call app, and build context is our current directory
+  app:
+    build: 
+      context: .
+    # We map our port 8000 on our host to port 8000 on our image
+    ports:
+      - "8000:8000"
+    # volumes allow us to make our update in our project into our image in realtime.
+    # Any change in the project will be automatically update in the container. No need to restart
+    # docker to make change into effect
+    # We map app directory in our project into the app directory in our docker image
+    volumes:
+      - ./app:/app
+    # command we use to run our application in the docker container
+    # > : break commands into lines
+    command: >
+      # run django development server available on 0.0.0.0:8000
+      sh -c "python manage.py runserver 0.0.0.0:8000"
