@@ -1,0 +1,19 @@
+# Tell travis what language and version
+language: python
+python:
+  - "3.6"
+
+# Tell Travis what services we need to use
+services:
+  - docker
+
+# Specify before script, travis will run this before
+# execution of any automation command
+# We need to install docker-compose
+before_script: pip install docker-compose
+
+# Specify script, 
+# We run docker-compose 
+script:
+  - docker-compose run app sh -c "python manage.py test && flake8"
+
