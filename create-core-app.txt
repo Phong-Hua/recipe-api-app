@@ -1,0 +1,8 @@
+run command
+docker-compose run app sh -c "python manage.py startapp core"
+
+In the core app
+We remove the tests.py because we move tests to a separate folder
+WE remove views.py, because the core only serving database model
+
+In the core app we create tests folder

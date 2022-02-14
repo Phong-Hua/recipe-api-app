@@ -1,0 +1,3 @@
+Everytime you change the model, you need to run migration
+Make migration to the core app
+docker-compose run app sh -c "python manage.py makemigrations core"

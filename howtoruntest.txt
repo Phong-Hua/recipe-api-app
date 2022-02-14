@@ -1,0 +1,2 @@
+run this command
+ docker-compose run app sh -c "python manage.py test"
