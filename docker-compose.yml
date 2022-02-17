@@ -9,6 +9,7 @@ services:
     build: 
       context: .
     # We map our port 8000 on our host to port 8000 on our image
+    # To access using browser: http://127.0.0.1:8000/
     ports:
       - "8000:8000"
     # volumes allow us to make our update in our project into our image in realtime.
